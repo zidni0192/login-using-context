@@ -1,7 +1,7 @@
-* > *{
+* > * {
     font-family: Calibri;
 }
 
-input:focus-visible{
+input:focus-visible {
     outline: none;
 }

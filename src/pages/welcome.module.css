@@ -1,21 +1,21 @@
-.container{
+.container {
     padding: 10px
 }
 
-.wrapper{
+.wrapper {
     border: 1px solid #4472C4;
     height: calc(100vh - 25px);
 }
 
-.header{
+.header {
     padding: 30px;
     overflow: hidden;
     border-bottom: 1px solid #4472C4;
 }
 
-.headerTitle{
-    font-size:54px;
-    background: -webkit-linear-gradient(#1F4E79,#5B9BD5,#9DC3E6);
+.headerTitle {
+    font-size: 54px;
+    background: -webkit-linear-gradient(#1F4E79, #5B9BD5, #9DC3E6);
     -webkit-background-clip: text;
     line-height: 34px;
     -webkit-text-fill-color: transparent;
@@ -26,36 +26,36 @@
     margin-bottom: -30px;
 }
 
-.headerTitle:after{
+.headerTitle:after {
     line-height: 34px;
     content: "OBS REACTJS TEST";
     display: flex;
-    transform:rotateX(180deg);
-    background-image: linear-gradient(#fff 50%,#BDD7EE);
+    transform: rotateX(180deg);
+    background-image: linear-gradient(#fff 50%, #BDD7EE);
     -webkit-background-clip: text;
     color: transparent;
 }
 
-.wrapperMain{
+.wrapperMain {
     display: flex;
     height: calc(100% - 60px - 38px);
 }
 
-.sidebar{
+.sidebar {
     width: 200px;
     border-right: 1px solid #4472C4;
 }
 
-.menu{
+.menu {
     width: 100%;
     border: 0;
-    background: linear-gradient(#6083CB,#3E70CA,#2E61BA);
+    background: linear-gradient(#6083CB, #3E70CA, #2E61BA);
     color: #fff;
     font-size: 15pt;
     padding: 10px;
 }
 
-.content{
+.content {
     width: calc(100% - 200px);
     height: 100%;
     display: flex;
@@ -63,7 +63,7 @@
     align-items: center;
 }
 
-.welcomeMessage{
+.welcomeMessage {
     font-weight: 400;
     font-size: 100pt;
     color: #4472C4;

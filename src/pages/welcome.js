@@ -1,12 +1,13 @@
 import React, {useContext} from 'react';
 import {UserContext} from "../context/user.context";
 import welcomeStyle from "./welcome.module.css"
+
 const Welcome = () => {
     const {user} = useContext(UserContext)
     return (
         <div className={welcomeStyle.container}>
             <div className={welcomeStyle.wrapper}>
-                <div className={welcomeStyle.header} >
+                <div className={welcomeStyle.header}>
                     <h1 className={welcomeStyle.headerTitle}>
                         OBS REACTJS TEST
                     </h1>
@@ -17,7 +18,7 @@ const Welcome = () => {
                             HOME
                         </button>
                     </div>
-                    <div className={welcomeStyle.content} >
+                    <div className={welcomeStyle.content}>
                         <h2 className={welcomeStyle.welcomeMessage}>Welcome {user.user_id}</h2>
                     </div>
                 </div>

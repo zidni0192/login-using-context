@@ -1,6 +1,7 @@
 import React, {useCallback, useContext} from 'react';
 import {UserContext} from "../context/user.context";
 import loginStyle from './login.module.css'
+import {Link} from "react-router-dom";
 
 const Login = () => {
     const {setUser} = useContext(UserContext)
@@ -8,11 +9,11 @@ const Login = () => {
         e.preventDefault()
         const form = new FormData(e.target)
         if (form.get('user_id') === "admin" && form.get('password') === "admin") {
-            setUser({user_id: form.get('user_id'),})
+            setUser({user_id: form.get('user_id')})
         } else {
             alert('Invalid Credentials')
         }
-    }, [])
+    },[setUser])
     return (
         <form onSubmit={handleSubmit}>
             <div className={loginStyle.container}>
@@ -34,7 +35,7 @@ const Login = () => {
                 <button type={"submit"} className={loginStyle.buttonSubmit}>
                     Sign In
                 </button>
-                <a href={"#"}>Forgot My Password</a>
+                <Link to={'#'}>Forgot My Password</Link>
             </div>
         </form>
     );
