@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import {UserContext, UserContextProvider} from "./context/user.context";
+import Welcome from "./pages/welcome";
+import Login from "./pages/login";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <UserContextProvider>
+            <UserContext.Consumer>
+                {({user}) => {
+                    console.log(user)
+                    return (
+                        <BrowserRouter>
+                            <Routes>
+                                <Route path="/">
+                                    <Route index element={!user.user_id ? <Navigate to={"login"}/> : <Welcome/>}/>
+                                    <Route path={'login'} element={user.user_id ? <Navigate to={"/"}/> : <Login/>}/>
+                                </Route>
+                            </Routes>
+                        </BrowserRouter>
+                    )
+                }}
+            </UserContext.Consumer>
+        </UserContextProvider>
+    );
 }
 
 export default App;
