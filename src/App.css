@@ -1,27 +1,6 @@
 * > *{
     font-family: Calibri;
 }
-.header-title{
-    font-size:54px;
-    background: -webkit-linear-gradient(#1F4E79,#5B9BD5,#9DC3E6);
-    -webkit-background-clip: text;
-    line-height: 34px;
-    -webkit-text-fill-color: transparent;
-    max-height: 100px;
-    opacity: .8;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.header-title:after{
-    line-height: 34px;
-    content: "OBS REACTJS TEST";
-    display: flex;
-    transform:rotateX(180deg);
-    background-image: linear-gradient(#fff 50%,#BDD7EE);
-    -webkit-background-clip: text;
-    color: transparent;
-}
 
 input:focus-visible{
     outline: none;

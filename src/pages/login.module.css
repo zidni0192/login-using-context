@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    gap: 30px;
+}
+
+.headerTitle {
+    font-size: 100pt;
+    background: -webkit-linear-gradient(#1F4E79, #5B9BD5, #9DC3E6);
+    -webkit-background-clip: text;
+    line-height: 89px;
+    -webkit-text-fill-color: transparent;
+    max-height: 100px;
+    opacity: .8;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+.headerTitle:after {
+    line-height: 90px;
+    content: "OBS REACTJS TEST";
+    display: flex;
+    transform: rotateX(180deg);
+    background-image: linear-gradient(#fff 50%, #BDD7EE);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.inputText {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #4472C4;
+    font-size: 14pt;
+    width: 200px;
+}
+
+.buttonSubmit {
+    padding: 10px 40px;
+    background: linear-gradient(#9DC3E6, #609ED6, #2A69A2);
+    color: #FFF;
+    border-radius: 8px;
+    border: 0px;
+    font-weight: 700;
+    cursor: pointer;
+    marginTop: 25px;
+    font-size: 14pt;
+}
